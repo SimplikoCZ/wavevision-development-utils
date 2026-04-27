@@ -27,16 +27,26 @@
       "Wavevision\\": "tests/"
     }
   },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/SimplikoCZ/wavevision-utils.git"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/SimplikoCZ/wavevision-coding-standard.git"
+    }
+  ],
   "require": {
-    "php": ">=7.4",
-    "nette/neon": "^3.1",
-    "wavevision/utils": "^2.11",
+    "php": "^8.5",
+    "nette/neon": "^3.4",
+    "wavevision/utils": "^3.0",
     "codedungeon/php-cli-colors": "^1.12",
-    "vanilla/garden-cli": "^3.1"
+    "vanilla/garden-cli": "^4.0"
   },
   "require-dev": {
-    "wavevision/coding-standard": "^6.0",
-    "phpunit/phpunit": "^9.2"
+    "wavevision/coding-standard": "^7.0",
+    "phpunit/phpunit": "^11.1"
   },
   "bin": [
     "bin/create-database",
@@ -48,5 +58,10 @@
   ],
   "extra": {
     "phpstan": {}
+  },
+  "config": {
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
   }
 }
